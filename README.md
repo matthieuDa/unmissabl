@@ -83,3 +83,10 @@ Cette version réorganise complètement la structure du dépôt pour une meilleu
 - Regroupement logique des fichiers par fonction
 - Structure modulaire pour faciliter les futures améliorations
 - `.gitignore` ajouté pour ignorer les fichiers générés
+
+### Fonts manquantes
+Les fichiers de polices référencés dans les CSS (`MaisonNeueWEB-*.woff2`) ne sont pas présents dans le dépôt. 
+Ces polices sont probablement servies depuis le site WordPress original. Pour un déploiement complet :
+- Soit ajouter les fichiers de polices dans `public/fonts/`
+- Soit mettre à jour les chemins dans `src/styles/main.css` et `src/styles/blog.css` pour pointer vers les polices hébergées
+- Les chemins actuels pointent vers `../fonts/` (relatif depuis src/styles/), ce qui nécessiterait `public/fonts/`

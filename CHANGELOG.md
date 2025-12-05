@@ -209,6 +209,8 @@ Configurer le serveur web pour servir depuis la racine du projet avec `/public/i
 
 5. **Assets Externes** : Certains assets référencés (comme les logos et images manquantes) n'étaient pas présents dans le dépôt original et ne sont donc pas inclus.
 
+6. **Fonts Manquantes** : Les fichiers de polices (`MaisonNeueWEB-*.woff2`) référencés dans les CSS ne sont pas présents dans le dépôt. Ces polices doivent être ajoutées dans `public/fonts/` pour un déploiement complet, ou les chemins CSS doivent être mis à jour pour pointer vers des polices hébergées ailleurs.
+
 ---
 
 ## Prochaines Étapes Recommandées
