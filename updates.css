@@ -1,0 +1,868 @@
+.updated-main {
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.updated-main li {
+  margin-right: 10px;
+}
+.updated-main li:last-child {
+  margin-right: 0;
+}
+.updated-main a {
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  position: relative;
+  transition: color 500ms ease-in-out;
+}
+.updated-main a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: opacity 300ms linear, width 300ms linear, background-color 500ms ease-in-out;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  opacity: 0;
+}
+.updated-main a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+@media (max-width: 640px) {
+  .updated-main a {
+    font-size: 37px;
+    line-height: 50px;
+    color: #fff;
+  }
+}
+.updated-main .contact-btn-mobile {
+  color: #fff;
+}
+@media (min-width: 641px) {
+  .updated-main .contact-btn {
+    color: #E10111 !important;
+  }
+  .updated-main .contact-btn::after {
+    background-color: #E10111 !important;
+  }
+}
+.updated-main .contact-btn.disable-contact-btn {
+  pointer-events: none;
+  color: #767676 !important;
+}
+@media (max-width: 640px) {
+  .updated-main .contact-btn {
+    color: #fff;
+  }
+}
+.updated-main .contact-btn.disable-contact-btn-mobile {
+  pointer-events: none;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body:not(.page-template-page-work, .category-news, .single-post) .updated-main li a {
+  transition: color 900ms 500ms ease-in-out;
+}
+body:not(.page-template-page-work, .category-news, .single-post) .updated-main li a::after {
+  transition: opacity 300ms linear, width 300ms linear, background-color 900ms 500ms ease-in-out;
+}
+
+.updated-nav {
+  position: static;
+  right: 0;
+  transform: translateX(0%) translateZ(0px);
+  width: auto;
+  padding: 0;
+  background: transparent;
+}
+@media (max-width: 640px) {
+  .updated-nav {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%) translateZ(0px);
+    background: #f71614;
+    z-index: 9997;
+    height: 100vh; min-height: 100%; max-height: 100%;
+  }
+  .updated-nav .updated-main {
+    display: block;
+    position: static;
+    flex: 1;
+  }
+}
+
+.nav-trigger-updated {
+  visibility: hidden;
+}
+@media (max-width: 640px) {
+  .nav-trigger-updated {
+    visibility: visible;
+  }
+}
+
+.category-news header.sticky-header .updated-main a {
+  color: #fff;
+}
+@media (max-width: 640px) {
+  .category-news header .updated-main a.nav-news-link {
+    color: #000 !important;
+  }
+}
+
+.page-template-page-work header.sticky-header .updated-main a {
+  color: #fff;
+}
+.page-template-page-work header.sticky-header .updated-main a.contact-btn {
+  color: #E10111 !important;
+}
+.page-template-page-work header.sticky-header .updated-main a.contact-btn.disable-contact-btn {
+  color: #767676 !important;
+}
+.page-template-page-work header.sticky-header .updated-main a.nav-work-link::after {
+  background-color: #fff !important;
+}
+@media (max-width: 640px) {
+  .page-template-page-work header .updated-main a.nav-work-link {
+    color: #000 !important;
+  }
+}
+
+.category-news .updated-main a, .page-template-page-work .updated-main a, .single-post header .updated-main a {
+  color: #000;
+}
+.category-news .updated-main a.contact-btn, .page-template-page-work .updated-main a.contact-btn, .single-post header .updated-main a.contact-btn {
+  color: #e10111 !important;
+}
+.category-news.sticky-header .updated-main a, .page-template-page-work.sticky-header .updated-main a, .single-post header.sticky-header .updated-main a {
+  color: #fff !important;
+}
+.category-news.sticky-header .updated-main a.nav-work-link::after, .page-template-page-work.sticky-header .updated-main a.nav-work-link::after, .single-post header.sticky-header .updated-main a.nav-work-link::after {
+  background-color: #fff !important;
+}
+
+.category-news.scrolling header .logo:before,
+.category-news.scrolling header .logo:after {
+  transition: opacity 0.3s ease-in-out !important;
+}
+
+.single-post header .updated-main a {
+  color: #000 !important;
+}
+@media (max-width: 640px) {
+  .single-post header .updated-main a {
+    color: #fff !important;
+  }
+  .single-post header .updated-main a.nav-news-link {
+    color: #000 !important;
+  }
+}
+
+header.light .updated-main a {
+  color: #fff;
+}
+header.light .updated-main a::after {
+  background-color: #fff;
+}
+header.red-bg .contact-btn {
+  color: #000 !important;
+}
+header.red-bg .contact-btn::after {
+  background-color: #000 !important;
+}
+
+header.dark.sticky-header .updated-main a {
+  color: #fff !important;
+}
+
+.single-post header.sticky-header .updated-main a {
+  color: #fff !important;
+}
+.single-post header.sticky-header .updated-main a.contact-btn {
+  color: #e10111 !important;
+}
+.single-post header.sticky-header .updated-main a.contact-btn.disable-contact-btn {
+  color: #767676 !important;
+}
+
+.single .updated-main .contact-btn, .category-news header.sticky-header .updated-main .contact-btn {
+  color: #e10111 !important;
+}
+@media (max-width: 640px) {
+  .single .updated-main .contact-btn, .category-news header.sticky-header .updated-main .contact-btn {
+    color: #fff !important;
+  }
+}
+
+.single .updated-main .contact-btn.disable-contact-btn-mobile, .category-news .updated-main .contact-btn.disable-contact-btn-mobile, .single-post header.sticky-header .updated-main .contact-btn.disable-contact-btn-mobile {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.single .updated-main .contact-btn.disable-contact-btn, .category-news header.sticky-header .updated-main .contact-btn.disable-contact-btn {
+  color: #767676 !important;
+}
+
+.category-news header.sticky-header .nav-news-link::after {
+  background-color: #fff !important;
+}
+
+.single-post header.sticky-header .nav-news-link::after {
+  background-color: #fff !important;
+}
+
+
+@media (max-width: 640px) {
+  .category-news .updated-main a, .page-template-page-work .updated-main a, .single-post header .updated-main a,
+  .category-news .updated-main a.contact-btn, .page-template-page-work .updated-main a.contact-btn, .single-post header .updated-main a.contact-btn, .page-template-page-work header.sticky-header .updated-main a.contact-btn, .single-post header.sticky-header .updated-main a.contact-btn {
+    color: #fff !important;
+  }
+}
+
+
+@media (min-width: 641px) {
+  .page-template-page-work .nav-work-link::after,
+.page-template-page-about .nav-services-link::after,
+.single-projects .nav-work-link::after,
+.category-news .nav-news-link::after,
+.single-post .nav-news-link::after {
+    width: 100% !important;
+    opacity: 1 !important;
+  }
+}
+@media (max-width: 640px) {
+  .page-template-page-work .nav-work-link,
+.page-template-page-about .nav-services-link,
+.single-projects .nav-work-link,
+.category-news .nav-news-link,
+.single-post .nav-news-link {
+    color: #000 !important;
+  }
+}
+
+header .contact-info-mobile {
+  display: none;
+}
+@media (max-width: 640px) {
+  header .contact-info-mobile {
+    display: block;
+  }
+}
+
+.iphone.ios body {
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.sticky-header {
+  padding-bottom: 20px;
+}
+@media (max-width: 640px) {
+  .sticky-header {
+    padding-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .sticky-header .holder {
+    padding: 35px 40px 0px;
+  }
+}
+
+.category-news header {
+  transition: all 0.3s ease-in-out;
+}
+
+.page-template-page-work header {
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-new {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #000;
+  padding: 75px 0 75px 0;
+  transition: transform 800ms 500ms ease-in-out;
+  transform: translateX(0%) translateY(0%) translateZ(0px);
+}
+@media (max-width: 640px) {
+  .contact-new {
+    overflow: auto;
+    display: block;
+    padding: 85px 0 25px 0;
+  }
+}
+
+.title {
+  font-size: 120px;
+  font-family: "MaisonNeue";
+  font-weight: 700;
+  line-height: 129px;
+  text-align: left;
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .title {
+    padding-left: 80px;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 639px) {
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    max-width: 547px !important;
+    padding-bottom: 30px !important;
+    padding-left: 25px;
+  }
+}
+@media (max-width: 640px) {
+  .title {
+    display: block;
+    font-size: 70px;
+    text-align: left;
+    padding-bottom: 0;
+    padding-left: 25px;
+  }
+}
+
+.contact-main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1024px) {
+  .contact-main-section {
+    padding: 0 80px;
+  }
+}
+@media (max-width: 768px) {
+  .contact-main-section {
+    padding-bottom: 45px;
+    justify-content: center;
+  }
+}
+@media (max-width: 640px) {
+  .contact-main-section {
+    padding: 0px 25px 65px 25px;
+  }
+}
+
+.category-news .contact-main-section {
+  padding-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .category-news .contact-main-section {
+    justify-content: center !important;
+  }
+}
+.category-news .contact-footer ul {
+  margin-left: 0.5em;
+}
+
+.contact-footer {
+  color: #fff;
+  max-width: 1200px;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .contact-footer {
+    padding: 50px 80px;
+  }
+}
+@media (max-width: 640px) {
+  .contact-footer {
+    display: block;
+    position: static;
+    padding: 25px;
+  }
+}
+
+.contact-footer-wrapper {
+  width: 100%;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+@media (max-width: 640px) {
+  .contact-footer-wrapper {
+    position: static;
+    padding-bottom: 0px;
+  }
+}
+
+.contact-footer-rights {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  float: left;
+}
+.contact-footer-rights span {
+  font-weight: 700;
+}
+@media (max-width: 640px) {
+  .contact-footer-rights {
+    padding-bottom: 25px;
+  }
+}
+
+.contact-footer-social-links {
+  float: right;
+  list-style: none;
+}
+.contact-footer-social-links li {
+  display: inline-block;
+}
+.contact-footer-social-links li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.contact-footer-social-links li a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: all 300ms linear;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.contact-footer-social-links li a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+.contact-footer-social-links li:not(:first-child) {
+  margin-left: 15px;
+}
+@media (max-width: 640px) {
+  .contact-footer-social-links {
+    float: left;
+    margin-left: 0;
+  }
+  .contact-footer-social-links li:first-child {
+    margin-left: 0;
+  }
+    .contact-footer-social-links > ul {
+        margin-left: 0;
+    }
+}
+
+.contact-holder-updated {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contact-holder-updated .text-holder-updated {
+  max-width: 100%;
+}
+
+.text-holder-left-col {
+  color: #fff;
+}
+.text-holder-left-col p {
+  display: flex;
+  align-items: stretch;
+  margin-top: 30px;
+  max-width: 470px;
+  margin-bottom: 60px;
+  font-size: 16px;
+  font-family: "MaisonNeue";
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+}
+@media (max-width: 640px) {
+  .text-holder-left-col p {
+    max-width: none;
+    margin-bottom: 25px;
+  }
+}
+.text-holder-left-col .col-box {
+  list-style: none;
+  margin-left: 0;
+  -moz-columns: 2 200px;
+       columns: 2 200px;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+}
+.text-holder-left-col .col-box a {
+  position: relative;
+  font-size: 12px;
+  font-family: "MaisonNeue";
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.text-holder-left-col .col-box a::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: all 300ms linear;
+  content: "";
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0;
+}
+.text-holder-left-col .col-box a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+.text-holder-left-col .col-box li {
+  padding-bottom: 25px;
+}
+.text-holder-left-col .col-box li:nth-child(even) {
+  padding-bottom: 10px;
+}
+@media (max-width: 640px) {
+  .text-holder-left-col .col-box li:nth-child(even) {
+    padding-bottom: 25px;
+  }
+  .text-holder-left-col .col-box li:nth-child(even):last-child {
+    padding-bottom: 0;
+  }
+}
+.text-holder-left-col .col-box h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  font-family: "MaisonNeue";
+}
+@media (max-width: 1080px) {
+  .text-holder-left-col {
+    padding-right: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .text-holder-left-col {
+    padding-right: 0;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 640px) {
+  .text-holder-left-col {
+    padding-bottom: 0;
+  }
+}
+
+.text-holder-right-col .contact-subscribe-form {
+  display: none;
+  color: #fff;
+}
+.text-holder-right-col .contact-subscribe-form ul {
+  margin-left: 0;
+  padding-bottom: 50px;
+}
+.text-holder-right-col .contact-subscribe-form ul li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.text-holder-right-col .contact-subscribe-form .subscribe-text {
+  padding-bottom: 25px;
+  font-size: 19px;
+  font-weight: 700;
+  font-family: "MaisonNeue";
+  line-height: 20px;
+  text-align: left;
+  color: #fff;
+}
+.text-holder-right-col .contact-subscribe-form input[type=email] {
+  width: 100%;
+  padding-bottom: 15px;
+  font-size: 19px;
+  color: #767676;
+  border: 0 solid transparent;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  outline-style: none;
+}
+.text-holder-right-col .contact-subscribe-form input[type=email]::-moz-placeholder {
+  font-size: 19px;
+  color: #767676;
+  font-family: "MaisonNeue";
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.text-holder-right-col .contact-subscribe-form input[type=email]:-ms-input-placeholder {
+  font-size: 19px;
+  color: #767676;
+  font-family: "MaisonNeue";
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.text-holder-right-col .contact-subscribe-form input[type=email]::placeholder {
+  font-size: 19px;
+  color: #767676;
+  font-family: "MaisonNeue";
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.text-holder-right-col .contact-subscribe-form input:invalid {
+  box-shadow: none;
+}
+.text-holder-right-col .contact-subscribe-form input:focus {
+  outline: none;
+}
+.text-holder-right-col .contact-subscribe-form *:focus {
+  outline: none;
+}
+.text-holder-right-col .submit-form-btn-wrapper {
+  align-items: flex-end;
+  padding-top: 20px;
+}
+.text-holder-right-col .submit-form-btn-wrapper input[type=submit] {
+  font-family: "MaisonNeue";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0.33em;
+  text-align: left;
+  text-align: right;
+  text-decoration: none;
+  color: #fff;
+  padding-right: 20px;
+  opacity: 0.7;
+  background-color: transparent;
+  border: none;
+  -webkit-backface-visibility: hidden !important;
+          backface-visibility: hidden !important;
+}
+.text-holder-right-col .submit-form-btn-wrapper svg {
+  transition: all 500ms;
+}
+.text-holder-right-col .submit-form-btn-wrapper:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.text-holder-right-col .submit-form-btn-wrapper:hover svg {
+  transform: translateX(10px);
+}
+@media (max-width: 896px) {
+  .text-holder-right-col {
+    width: 80%;
+    padding-top: 0;
+  }
+}
+@media (max-width: 640px) {
+  .text-holder-right-col {
+    width: 100%;
+    padding-top: 70px;
+  }
+}
+
+.address-content {
+  max-width: 410px;
+}
+.address-content a {
+  display: block;
+  font-family: "MaisonNeue";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 46px;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 1024px) {
+  .address-content a {
+    font-size: 25px;
+  }
+}
+@media (max-width: 640px) {
+  .address-content a {
+    font-size: 26px;
+  }
+}
+.address-content .phone {
+  padding-top: 17px;
+  font-family: "MaisonNeue";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 19px;
+  text-align: left;
+}
+.address-content .address-pin-icon {
+  padding-left: 11px;
+}
+@media (max-width: 640px) {
+  .address-content .address-pin-icon {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .address-content {
+    max-width: 325px;
+  }
+}
+
+@media (max-width: 640px) {
+  header nav .social {
+    display: flex;
+  }
+  header nav .social li {
+    padding-right: 20px;
+  }
+}
+.contact-dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-out;
+  transform: translateY(100%);
+  z-index: 9998;
+}
+
+.show-contact-dialog {
+  pointer-events: auto;
+  transform: translateY(0%);
+}
+
+.contact-dialog-close-btn {
+  position: absolute;
+  top: 10%;
+  right: 122px;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  .contact-dialog-close-btn {
+    right: 40px;
+  }
+}
+
+.thank-you-mobile-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10000;
+}
+.thank-you-mobile-dialog h3 {
+  font-size: 101px;
+  font-family: "MaisonNeue";
+  padding-left: 40px;
+}
+
+.thank-you-mobile-dialog-close-btn {
+  position: absolute;
+  top: 8%;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: #EC2227;
+}
+
+@media (max-width: 640px) {
+  html, body {
+    overflow-y: visible !important;
+  }
+
+  #main {
+    overflow: visible !important;
+  }
+
+  .tablet .home #main, .mobile .home #main, .tablet .page-template-page-about #main {
+    position: relative !important;
+  }
+
+  .section.quote {
+    padding: 0 !important;
+  }
+
+  .sections-holder .media-holder {
+    transform: none;
+  }
+
+  section.section.mobile-fullscreen {
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
+  section.section:not(.mobile-fullscreen) article {
+    position: static !important;
+    transform: none !important;
+    padding: 40px !important;
+  }
+
+  .sections-holder.home-sections-holder section.section.contact-part {
+    height: auto !important;
+  }
+}
+.work-page-footer-section {
+  margin-top: 100px !important;
+}
+.work-page-footer-section .contact-main-section {
+  padding-bottom: 60px;
+}
+
+.single .contact-main-section {
+  padding-bottom: 60px;
+}
+
+.page-template-page-about blockquote {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 640px) {
+  .sections-holder section.section.contact-part {
+    height: auto !important;
+  }
+}
+
+.filters-holder {
+  margin-top: 130px;
+}
+
+.single-post header.sticky-header .updated-main a.nav-news-link {
+    color: #000 !important;
+}
+
+
+
+.work-holder {
+  padding-top: 0px;
+}/*# sourceMappingURL=updates.css.map */
