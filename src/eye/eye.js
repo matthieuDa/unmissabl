@@ -41,12 +41,27 @@
         // Create eye geometry with high resolution
         const eyeGeometry = new THREE.SphereGeometry(1, 256, 256);
         
+        // Procedural textures (generate once)
+        const texGen = (window.textureGenerators || {});
+        const texSize = 2048;
+        const heightCanvas = texGen.genIrisCanvas ? texGen.genIrisCanvas(texSize) : null;
+        let irisTex = heightCanvas ? new THREE.CanvasTexture(heightCanvas) : null;
+        if (irisTex) { irisTex.encoding = THREE.sRGBEncoding; irisTex.needsUpdate = true; irisTex.wrapS = irisTex.wrapT = THREE.RepeatWrapping; }
+        const normalCanvas = (texGen.genNormalFromHeightCanvas && heightCanvas) ? texGen.genNormalFromHeightCanvas(heightCanvas, 3.0) : null;
+        let normalTex = normalCanvas ? new THREE.CanvasTexture(normalCanvas) : null;
+        if (normalTex) { normalTex.format = THREE.RGBAFormat; normalTex.needsUpdate = true; normalTex.wrapS = normalTex.wrapT = THREE.RepeatWrapping; }
+        let ringTex = texGen.genRingCanvas ? new THREE.CanvasTexture(texGen.genRingCanvas(1024)) : null;
+        if (ringTex) { ringTex.needsUpdate = true; ringTex.wrapS = ringTex.wrapT = THREE.RepeatWrapping; }
+        let grainTex = texGen.genGrainCanvas ? new THREE.CanvasTexture(texGen.genGrainCanvas(1024, 0.12)) : null;
+        if (grainTex) { grainTex.needsUpdate = true; grainTex.wrapS = grainTex.wrapT = THREE.RepeatWrapping; }
+
         // Create custom shader for realistic eye
         const eyeMaterial = new THREE.ShaderMaterial({
             vertexShader: `
-                varying vec3 vNormal;
-                varying vec3 vPosition;
-                varying vec3 vViewDir;
+            varying vec3 vNormal;
+            varying vec3 vPosition;
+            varying vec3 vViewDir;
+            varying vec2 vUv;
                 
                 uniform float iris_size;
                 uniform float cornea_bump_amount;
@@ -69,6 +84,7 @@
                     vNormal = normalize(normalMatrix * normal);
                     vPosition = pos;
                     vViewDir = normalize(cameraPosition - (modelMatrix * vec4(pos, 1.0)).xyz);
+                    vUv = uv;
                     
                     gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
                 }
@@ -77,12 +93,17 @@
                 varying vec3 vNormal;
                 varying vec3 vPosition;
                 varying vec3 vViewDir;
-                
+                varying vec2 vUv;
+
                 uniform float pupil_size;
                 uniform float iris_size;
                 uniform float iris_border;
                 uniform float ior;
                 uniform float alpha_intensity;
+                uniform sampler2D irisMap;
+                uniform sampler2D irisNormalMap;
+                uniform sampler2D ringMap;
+                uniform sampler2D grainMap;
                 
                 float hash(float n) {
                     return fract(sin(n) * 43758.5453);
@@ -114,12 +135,17 @@
                     float r = length(norm_P.xy);
                     float iris_pos = (r - pupil_size) / (iris_size - pupil_size);
                     
-                    // Iris color with noise texture
+                    // Iris color from generated texture (fallback to procedural noise)
                     vec3 irisCol = vec3(0.3, 0.5, 0.7);
                     if (r < iris_size) {
-                        vec3 noiseCol = vec3(noise(norm_P * 8.0));
-                        irisCol = mix(vec3(0.1, 0.15, 0.2), vec3(0.4, 0.6, 0.8), noiseCol);
-                        irisCol *= (1.0 + noiseCol * 0.3);
+                        vec3 tex = texture2D(irisMap, vUv).rgb;
+                        if (tex == vec3(0.0)) {
+                            vec3 noiseCol = vec3(noise(norm_P * 8.0));
+                            irisCol = mix(vec3(0.1, 0.15, 0.2), vec3(0.4, 0.6, 0.8), noiseCol);
+                            irisCol *= (1.0 + noiseCol * 0.3);
+                        } else {
+                            irisCol = tex.rgb;
+                        }
                     }
                     
                     // Pupil
@@ -156,6 +182,14 @@
                     float diffuse = max(0.0, dot(N, L)) * 0.8 + 0.3;
                     finalCol *= diffuse;
                     finalCol += vec3(1.0) * spec * 0.8;
+
+                    // Add ring overlay (soft additive)
+                    float ringVal = texture2D(ringMap, vUv).r;
+                    finalCol += vec3(1.0) * ringVal * 0.3;
+
+                    // Add grain overlay (multiply subtle)
+                    float g = texture2D(grainMap, vUv * 4.0).r;
+                    finalCol = mix(finalCol, finalCol * (0.9 + g * 0.2), 0.12);
                     
                     // Transparency effect at edges
                     float alpha = 1.0;
@@ -181,6 +215,21 @@
             }
         });
         
+        // Ensure uniform textures exist (fallback 1x1 white textures)
+        function createSolidCanvas(color=[255,255,255,255]){
+            const c = document.createElement('canvas'); c.width = c.height = 1; const ctx = c.getContext('2d'); ctx.fillStyle = `rgba(${color[0]},${color[1]},${color[2]},${color[3]/255})`; ctx.fillRect(0,0,1,1); return c;
+        }
+        const fallback = new THREE.CanvasTexture(createSolidCanvas([255,255,255,255]));
+        if (!irisTex) irisTex = fallback; // assign fallback if absent
+        if (!normalTex) normalTex = fallback;
+        if (!ringTex) ringTex = fallback;
+        if (!grainTex) grainTex = fallback;
+
+        eyeMaterial.uniforms.irisMap = { value: irisTex };
+        eyeMaterial.uniforms.irisNormalMap = { value: normalTex };
+        eyeMaterial.uniforms.ringMap = { value: ringTex };
+        eyeMaterial.uniforms.grainMap = { value: grainTex };
+
         const eyeMesh = new THREE.Mesh(eyeGeometry, eyeMaterial);
         eyeMesh.castShadow = true;
         eyeMesh.receiveShadow = true;
