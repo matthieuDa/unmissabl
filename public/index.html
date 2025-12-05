@@ -99,7 +99,10 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 
     <script>
         var themeUrl = '..';
-    </script>
+    <!-- Load procedural texture generators first -->
+    <script type="text/javascript" src="../src/eye/textureGenerators.js"></script>
+    <!-- Then load eye renderer -->
+    <script type="text/javascript" src="../src/eye/eye.js"></script>
 
     <script type="text/javascript">
         setTimeout(function() {
