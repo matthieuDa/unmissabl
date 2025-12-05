@@ -2250,13 +2250,13 @@
     /*
     + Uniforms, textures and loading object */
 
-        var textureEnvRefl_A = new THREE.ImageUtils.loadTexture(themeUrl + '/assets/img/refl.jpg'),
-            textureEnvDiff_A = new THREE.ImageUtils.loadTexture(themeUrl + '/assets/img/diff1.jpg'),
-            textureEyeColor_A = new THREE.ImageUtils.loadTexture(themeUrl + '/assets/img/eye-pattern.jpg'),
-            textureEyeNormal_A = new THREE.ImageUtils.loadTexture(themeUrl + '/assets/img/eye-normals.png'),
-            textureEyeNormal_A1 = new THREE.ImageUtils.loadTexture(themeUrl + '/assets/img/eye-normals1.png'),
-            textureEyeColor_A1 = new THREE.ImageUtils.loadTexture(themeUrl + '/assets/img/eye-pattern1.jpg'),
-            textureEyeRefract_C = new THREE.ImageUtils.loadTexture(themeUrl + '/assets/img/refract.png');
+        var textureEnvRefl_A = new THREE.ImageUtils.loadTexture(themeUrl + '/public/images/refract.png'),
+            textureEnvDiff_A = new THREE.ImageUtils.loadTexture(themeUrl + '/public/images/noise.png'),
+            textureEyeColor_A = new THREE.ImageUtils.loadTexture(themeUrl + '/public/images/eye-pattern.jpg'),
+            textureEyeNormal_A = new THREE.ImageUtils.loadTexture(themeUrl + '/public/images/eye-normals1.png'),
+            textureEyeNormal_A1 = new THREE.ImageUtils.loadTexture(themeUrl + '/public/images/eye-normals1.png'),
+            textureEyeColor_A1 = new THREE.ImageUtils.loadTexture(themeUrl + '/public/images/eye-pattern1.jpg'),
+            textureEyeRefract_C = new THREE.ImageUtils.loadTexture(themeUrl + '/public/images/refract.png');
         
         textureEyeColor_A.wrapS = textureEyeNormal_A.wrapS = 
         textureEyeColor_A1.wrapS = textureEyeNormal_A1.wrapS = THREE.RepeatWrapping;
