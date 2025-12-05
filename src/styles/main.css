@@ -269,7 +269,7 @@
 		/* .landscape-message {
 			position: fixed; left: 0px; top: 0px; z-index: 9999; display: none;
 			width: 100%; height: 200%;
-			background: url(../img/bgr-landscape-message.png) center no-repeat #ffffff; background-size: contain;
+			background: url(../../public/images/bgr-landscape-message.png) center no-repeat #ffffff; background-size: contain;
 			-webkit-transform: translateY(-25%);
 			-moz-transform: translateY(-25%);
 			-ms-transform: translateY(-25%);
@@ -339,12 +339,12 @@
 						content: "";
 						position:absolute; left: 0px; top: 0px;
 						width: 100%; height: 100%;
-						background: url(../img/bgr-logo-dark.png) center no-repeat; background-size: 100% 100%;
+						background: url(../../public/images/bgr-logo-dark.png) center no-repeat; background-size: 100% 100%;
 						-webkit-transition:opacity 0.3s 0ms ease-in-out;
 						-moz-transition:opacity 0.3s 0ms ease-in-out;
 						transition:opacity 0.3s 0ms ease-in-out;
 						}
-						header .logo:after {background-image: url(../img/bgr-logo-light.png); opacity: 0;}
+						header .logo:after {background-image: url(../../public/images/bgr-logo-light.png); opacity: 0;}
 						header.light .logo:before {opacity:0;}
 						header.light .logo:after {opacity:1;}
 						header.opened.light .logo:before {opacity: 1;}
@@ -398,7 +398,7 @@
 						display: none; position: absolute; left: 40px; top: 35px;
 						width: 75px; height: 13px;
 						text-indent: -9999px;
-						background: url(../img/bgr-logo-light.png) left top no-repeat; background-size: 100% 100%;
+						background: url(../../public/images/bgr-logo-light.png) left top no-repeat; background-size: 100% 100%;
 						outline: none;
 						}
 					header nav .main {margin-bottom:95px;}
@@ -782,7 +782,7 @@
 			footer .bottom {
 				overflow:hidden; position:relative;
 				padding:60px 100px;
-				background: url(../img/bgr-logo-light.png) 100px center no-repeat #000000; background-size:123px 21px;
+				background: url(../../public/images/bgr-logo-light.png) 100px center no-repeat #000000; background-size:123px 21px;
 				-webkit-transition:background-color 900ms 250ms ease-in-out;
 				-moz-transition:background-color 900ms 250ms ease-in-out;
 				transition:background-color 900ms 250ms ease-in-out;
@@ -834,7 +834,7 @@
 		    transform: translateX(-50%) translateY(-50%);
 		    will-change: transform;
 			}
-/*			.home .sections-holder section.intro .media-holder {background: url(../img/bgr-intro-desktop.jpg) center no-repeat; background-size: cover;}
+/*			.home .sections-holder section.intro .media-holder {background: url(../../public/images/bgr-intro-desktop.jpg) center no-repeat; background-size: cover;}
 				.home .sections-holder section.intro .media-holder:after {display:none;}
 */		.sections-holder section.intro article {
 			bottom:auto; top:50%;
@@ -923,7 +923,7 @@
 				transform:translateX(-50%) translateY(-50%);
 				}
 /*				.tablet .home .sections-holder .intro .media-holder,
-				.mobile .home .sections-holder .intro .media-holder {background: url(../img/bgr-intro.jpg) center no-repeat; background-size: cover;}
+				.mobile .home .sections-holder .intro .media-holder {background: url(../../public/images/bgr-intro.jpg) center no-repeat; background-size: cover;}
 					.tablet .home .sections-holder .intro .media-holder:after,
 					.mobile .home .sections-holder .intro .media-holder:after {display: none;}
 					.tablet .home .sections-holder .intro .media-holder video,
@@ -992,63 +992,63 @@
 	+ Pls pls me */
 
 		.sections-holder section.pls-pls-me {}
-			.sections-holder section.pls-pls-me .media-holder span {background-image: url(../img/bgr-pls-pls-me.jpg);}
-				.mobile .sections-holder section.pls-pls-me .media-holder span {background-image: url(../img/bgr-pls-pls-me-mobile.jpg);}
-			.sections-holder section.pls-pls-me .parallax .one span {background-image: url(../img/bgr-pls-pls-me-layer-one.png);}
-			.sections-holder section.pls-pls-me .parallax .two span {background-image: url(../img/bgr-pls-pls-me-layer-two.png);}
-			.sections-holder section.pls-pls-me .parallax .three span {background-image: url(../img/bgr-pls-pls-me-layer-three.png);}
-			.sections-holder section.pls-pls-me .parallax .four span {background-image: url(../img/bgr-pls-pls-me-layer-four.png);}
-			.sections-holder section.pls-pls-me .parallax .five span {background-image: url(../img/bgr-pls-pls-me-layer-five.png);}
-			.sections-holder section.pls-pls-me .parallax .six span {background-image: url(../img/bgr-pls-pls-me-layer-six.png);}
+			.sections-holder section.pls-pls-me .media-holder span {background-image: url(../../public/images/bgr-pls-pls-me.jpg);}
+				.mobile .sections-holder section.pls-pls-me .media-holder span {background-image: url(../../public/images/bgr-pls-pls-me-mobile.jpg);}
+			.sections-holder section.pls-pls-me .parallax .one span {background-image: url(../../public/images/bgr-pls-pls-me-layer-one.png);}
+			.sections-holder section.pls-pls-me .parallax .two span {background-image: url(../../public/images/bgr-pls-pls-me-layer-two.png);}
+			.sections-holder section.pls-pls-me .parallax .three span {background-image: url(../../public/images/bgr-pls-pls-me-layer-three.png);}
+			.sections-holder section.pls-pls-me .parallax .four span {background-image: url(../../public/images/bgr-pls-pls-me-layer-four.png);}
+			.sections-holder section.pls-pls-me .parallax .five span {background-image: url(../../public/images/bgr-pls-pls-me-layer-five.png);}
+			.sections-holder section.pls-pls-me .parallax .six span {background-image: url(../../public/images/bgr-pls-pls-me-layer-six.png);}
 
 	/*
 	+ Unreal candy */
 
 		.sections-holder section.unreal-candy {}
-			.sections-holder section.unreal-candy .media-holder span {background-image: url(../img/bgr-unreal-candy.jpg);}
-			.sections-holder section.unreal-candy .parallax .one span {background-image: url(../img/bgr-unreal-candy-layer-one.png);}
-			.sections-holder section.unreal-candy .parallax .two span {background-image: url(../img/bgr-unreal-candy-layer-two.png);}
-			.sections-holder section.unreal-candy .parallax .three span {background-image: url(../img/bgr-unreal-candy-layer-three.png);}
-			.sections-holder section.unreal-candy .parallax .four span {background-image: url(../img/bgr-unreal-candy-layer-four.png);}
-			.sections-holder section.unreal-candy .parallax .five span {background-image: url(../img/bgr-unreal-candy-layer-five.png);}
-			.sections-holder section.unreal-candy .parallax .six span {background-image: url(../img/bgr-unreal-candy-layer-six.png);}
-			.sections-holder section.unreal-candy .parallax .seven span {background-image: url(../img/bgr-unreal-candy-layer-seven.png);}
-			.sections-holder section.unreal-candy .parallax .eight span {background-image: url(../img/bgr-unreal-candy-layer-eight.png);}
+			.sections-holder section.unreal-candy .media-holder span {background-image: url(../../public/images/bgr-unreal-candy.jpg);}
+			.sections-holder section.unreal-candy .parallax .one span {background-image: url(../../public/images/bgr-unreal-candy-layer-one.png);}
+			.sections-holder section.unreal-candy .parallax .two span {background-image: url(../../public/images/bgr-unreal-candy-layer-two.png);}
+			.sections-holder section.unreal-candy .parallax .three span {background-image: url(../../public/images/bgr-unreal-candy-layer-three.png);}
+			.sections-holder section.unreal-candy .parallax .four span {background-image: url(../../public/images/bgr-unreal-candy-layer-four.png);}
+			.sections-holder section.unreal-candy .parallax .five span {background-image: url(../../public/images/bgr-unreal-candy-layer-five.png);}
+			.sections-holder section.unreal-candy .parallax .six span {background-image: url(../../public/images/bgr-unreal-candy-layer-six.png);}
+			.sections-holder section.unreal-candy .parallax .seven span {background-image: url(../../public/images/bgr-unreal-candy-layer-seven.png);}
+			.sections-holder section.unreal-candy .parallax .eight span {background-image: url(../../public/images/bgr-unreal-candy-layer-eight.png);}
 
 	/*
 	+ Centaur properties */
 
 		.sections-holder section.centaur-properties {}
-			.sections-holder section.centaur-properties .media-holder span {background-image: url(../img/bgr-centaur-properties.jpg);}
-			.sections-holder section.centaur-properties .parallax .one span {background-image: url(../img/bgr-centaur-properties-layer-one.png);}
-			.sections-holder section.centaur-properties .parallax .two span {background-image: url(../img/bgr-centaur-properties-layer-two.png);}
-			.sections-holder section.centaur-properties .parallax .three span {background-image: url(../img/bgr-centaur-properties-layer-three.png);}
-			.sections-holder section.centaur-properties .parallax .four span {background-image: url(../img/bgr-centaur-properties-layer-four.png);}
+			.sections-holder section.centaur-properties .media-holder span {background-image: url(../../public/images/bgr-centaur-properties.jpg);}
+			.sections-holder section.centaur-properties .parallax .one span {background-image: url(../../public/images/bgr-centaur-properties-layer-one.png);}
+			.sections-holder section.centaur-properties .parallax .two span {background-image: url(../../public/images/bgr-centaur-properties-layer-two.png);}
+			.sections-holder section.centaur-properties .parallax .three span {background-image: url(../../public/images/bgr-centaur-properties-layer-three.png);}
+			.sections-holder section.centaur-properties .parallax .four span {background-image: url(../../public/images/bgr-centaur-properties-layer-four.png);}
 
 	/*
 	+ Longo park */
 
 		.sections-holder section.longo-park {}
-			.sections-holder section.longo-park .media-holder span {background-image: url(../img/bgr-longo-park.jpg);}
-			.sections-holder section.longo-park .parallax .one span {background-image: url(../img/bgr-longo-park-layer-one.png);}
-			.sections-holder section.longo-park .parallax .two span {background-image: url(../img/bgr-longo-park-layer-two.png);}
-			.sections-holder section.longo-park .parallax .three span {background-image: url(../img/bgr-longo-park-layer-three.png);}
-			.sections-holder section.longo-park .parallax .four span {background-image: url(../img/bgr-longo-park-layer-four.png);}
-			.sections-holder section.longo-park .parallax .five span {background-image: url(../img/bgr-longo-park-layer-five.png);}
-			.sections-holder section.longo-park .parallax .six span {background-image: url(../img/bgr-longo-park-layer-two.png);}
+			.sections-holder section.longo-park .media-holder span {background-image: url(../../public/images/bgr-longo-park.jpg);}
+			.sections-holder section.longo-park .parallax .one span {background-image: url(../../public/images/bgr-longo-park-layer-one.png);}
+			.sections-holder section.longo-park .parallax .two span {background-image: url(../../public/images/bgr-longo-park-layer-two.png);}
+			.sections-holder section.longo-park .parallax .three span {background-image: url(../../public/images/bgr-longo-park-layer-three.png);}
+			.sections-holder section.longo-park .parallax .four span {background-image: url(../../public/images/bgr-longo-park-layer-four.png);}
+			.sections-holder section.longo-park .parallax .five span {background-image: url(../../public/images/bgr-longo-park-layer-five.png);}
+			.sections-holder section.longo-park .parallax .six span {background-image: url(../../public/images/bgr-longo-park-layer-two.png);}
 		.tablet.landscape .sections-holder section.longo-park .parallax .four {margin-left: -30%;}
 
 	/*
 	+ Happy moves */
 
 		.sections-holder section.happy-moves {}
-			.sections-holder section.happy-moves .media-holder span {background-image: url(../img/bgr-happy-moves.jpg);}
-			.sections-holder section.happy-moves .parallax .one span {background-image: url(../img/bgr-happy-moves-layer-one.png);}
-			.sections-holder section.happy-moves .parallax .two span {background-image: url(../img/bgr-happy-moves-layer-two.png);}
-			.sections-holder section.happy-moves .parallax .three span {background-image: url(../img/bgr-happy-moves-layer-three.png);}
-			.sections-holder section.happy-moves .parallax .four span {background-image: url(../img/bgr-happy-moves-layer-four.png);}
-			.sections-holder section.happy-moves .parallax .five span {background-image: url(../img/bgr-happy-moves-layer-five.png);}
-			.sections-holder section.happy-moves .parallax .six span {background-image: url(../img/bgr-happy-moves-layer-six.png);}
+			.sections-holder section.happy-moves .media-holder span {background-image: url(../../public/images/bgr-happy-moves.jpg);}
+			.sections-holder section.happy-moves .parallax .one span {background-image: url(../../public/images/bgr-happy-moves-layer-one.png);}
+			.sections-holder section.happy-moves .parallax .two span {background-image: url(../../public/images/bgr-happy-moves-layer-two.png);}
+			.sections-holder section.happy-moves .parallax .three span {background-image: url(../../public/images/bgr-happy-moves-layer-three.png);}
+			.sections-holder section.happy-moves .parallax .four span {background-image: url(../../public/images/bgr-happy-moves-layer-four.png);}
+			.sections-holder section.happy-moves .parallax .five span {background-image: url(../../public/images/bgr-happy-moves-layer-five.png);}
+			.sections-holder section.happy-moves .parallax .six span {background-image: url(../../public/images/bgr-happy-moves-layer-six.png);}
 			.tablet.landscape .sections-holder section.happy-moves .parallax {margin-left: -20%;}
 			.tablet.portrait .sections-holder section.happy-moves .parallax {margin-left: 20%;}
 
@@ -1056,14 +1056,14 @@
 	+ Renaissance */
 
 		.sections-holder section.renaissance {}
-			.sections-holder section.renaissance .media-holder span {background-image: url(../img/bgr-renaissance.jpg);}
-			.sections-holder section.renaissance .parallax .one span {background-image: url(../img/bgr-renaissance-layer-one.png);}
-			.sections-holder section.renaissance .parallax .two span {background-image: url(../img/bgr-renaissance-layer-two.png);}
-			.sections-holder section.renaissance .parallax .three span {background-image: url(../img/bgr-renaissance-layer-three.png);}
-			.sections-holder section.renaissance .parallax .four span {background-image: url(../img/bgr-renaissance-layer-four.png);}
-			.sections-holder section.renaissance .parallax .five span {background-image: url(../img/bgr-renaissance-layer-five.png);}
-			.sections-holder section.renaissance .parallax .six span {background-image: url(../img/bgr-renaissance-layer-six.png);}
-			.sections-holder section.renaissance .parallax .seven span {background-image: url(../img/bgr-renaissance-layer-seven.png);}
+			.sections-holder section.renaissance .media-holder span {background-image: url(../../public/images/bgr-renaissance.jpg);}
+			.sections-holder section.renaissance .parallax .one span {background-image: url(../../public/images/bgr-renaissance-layer-one.png);}
+			.sections-holder section.renaissance .parallax .two span {background-image: url(../../public/images/bgr-renaissance-layer-two.png);}
+			.sections-holder section.renaissance .parallax .three span {background-image: url(../../public/images/bgr-renaissance-layer-three.png);}
+			.sections-holder section.renaissance .parallax .four span {background-image: url(../../public/images/bgr-renaissance-layer-four.png);}
+			.sections-holder section.renaissance .parallax .five span {background-image: url(../../public/images/bgr-renaissance-layer-five.png);}
+			.sections-holder section.renaissance .parallax .six span {background-image: url(../../public/images/bgr-renaissance-layer-six.png);}
+			.sections-holder section.renaissance .parallax .seven span {background-image: url(../../public/images/bgr-renaissance-layer-seven.png);}
 
 	/*
 	+ Yoga school */
@@ -1071,26 +1071,26 @@
 		.sections-holder section.yoga-school {}
 			.sections-holder section.yoga-school h3 {width: 50%;}
 			.portrait .sections-holder section.yoga-school h3 {width: 70%;}
-			.sections-holder section.yoga-school .media-holder span {background-image: url(../img/bgr-yoga-school.jpg);}
-				.portrait .sections-holder section.yoga-school .media-holder span {background-image: url(../img/bgr-yoga-school-portrait.jpg);}
-			.sections-holder section.yoga-school .parallax .one span {background-image: url(../img/bgr-yoga-school-layer-one.png);}
-				.portrait .sections-holder section.yoga-school .parallax .one span {background-image: url(../img/bgr-yoga-school-layer-one-portrait.png);}
-			.sections-holder section.yoga-school .parallax .two span {background-image: url(../img/bgr-yoga-school-layer-two.png);}
-			.sections-holder section.yoga-school .parallax .three span {background-image: url(../img/bgr-yoga-school-layer-three.png);}
+			.sections-holder section.yoga-school .media-holder span {background-image: url(../../public/images/bgr-yoga-school.jpg);}
+				.portrait .sections-holder section.yoga-school .media-holder span {background-image: url(../../public/images/bgr-yoga-school-portrait.jpg);}
+			.sections-holder section.yoga-school .parallax .one span {background-image: url(../../public/images/bgr-yoga-school-layer-one.png);}
+				.portrait .sections-holder section.yoga-school .parallax .one span {background-image: url(../../public/images/bgr-yoga-school-layer-one-portrait.png);}
+			.sections-holder section.yoga-school .parallax .two span {background-image: url(../../public/images/bgr-yoga-school-layer-two.png);}
+			.sections-holder section.yoga-school .parallax .three span {background-image: url(../../public/images/bgr-yoga-school-layer-three.png);}
 			.tablet.landscape .sections-holder section.yoga-school .parallax {margin-left: -30%;}
 
 	/*
 	+ Assemblage */
 
 		.sections-holder section.assemblage {}
-			.sections-holder section.assemblage .media-holder span {background-image: url(../img/bgr-assemblage.jpg);}
-			.sections-holder section.assemblage .parallax .one span {background-image: url(../img/bgr-assemblage-layer-one.png);}
-			.sections-holder section.assemblage .parallax .two span {background-image: url(../img/bgr-assemblage-layer-two.png);}
-			.sections-holder section.assemblage .parallax .three span {background-image: url(../img/bgr-assemblage-layer-three.png);}
-			.sections-holder section.assemblage .parallax .four span {background-image: url(../img/bgr-assemblage-layer-four.png);}
-			.sections-holder section.assemblage .parallax .five span {background-image: url(../img/bgr-assemblage-layer-five.png);}
-			.sections-holder section.assemblage .parallax .six span {background-image: url(../img/bgr-assemblage-layer-six.png);}
-			.sections-holder section.assemblage .parallax .seven span {background-image: url(../img/bgr-assemblage-layer-seven.png);}
+			.sections-holder section.assemblage .media-holder span {background-image: url(../../public/images/bgr-assemblage.jpg);}
+			.sections-holder section.assemblage .parallax .one span {background-image: url(../../public/images/bgr-assemblage-layer-one.png);}
+			.sections-holder section.assemblage .parallax .two span {background-image: url(../../public/images/bgr-assemblage-layer-two.png);}
+			.sections-holder section.assemblage .parallax .three span {background-image: url(../../public/images/bgr-assemblage-layer-three.png);}
+			.sections-holder section.assemblage .parallax .four span {background-image: url(../../public/images/bgr-assemblage-layer-four.png);}
+			.sections-holder section.assemblage .parallax .five span {background-image: url(../../public/images/bgr-assemblage-layer-five.png);}
+			.sections-holder section.assemblage .parallax .six span {background-image: url(../../public/images/bgr-assemblage-layer-six.png);}
+			.sections-holder section.assemblage .parallax .seven span {background-image: url(../../public/images/bgr-assemblage-layer-seven.png);}
 			.tablet.landscape .sections-holder section.assemblage .parallax {margin-left: -20%;}
 			.tablet.portrait .sections-holder section.assemblage .parallax {margin-left: 20%;}
 
@@ -2635,138 +2635,138 @@
 								-moz-transition: all 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
 								transition: all 750ms cubic-bezier(0.250, 0.460, 0.450, 0.940);								
 								}
-							.work-grid .happy-moves .bgr-holder i {background-image: url(../img/bgr-work-happy-moves.jpg);}
+							.work-grid .happy-moves .bgr-holder i {background-image: url(../../public/images/bgr-work-happy-moves.jpg);}
 							.work-grid .happy-moves .layer-one i {
-								background-image: url(../img/bgr-work-happy-moves-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-happy-moves-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: center bottom; transform-origin: center bottom;
 								}
 							.work-grid .happy-moves .layer-two i {
-								background-image: url(../img/bgr-work-happy-moves-layer-two.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-happy-moves-layer-two.png); background-position: right bottom;
 								-webkit-transform-origin: center bottom; transform-origin: center bottom;
 								}
-							.work-grid .pls-pls-me .bgr-holder i {background-image: url(../img/bgr-work-pls-pls-me.jpg);}
+							.work-grid .pls-pls-me .bgr-holder i {background-image: url(../../public/images/bgr-work-pls-pls-me.jpg);}
 							.work-grid .pls-pls-me .layer-one i {
-								background-image: url(../img/bgr-work-pls-pls-me-layer-one.png); 
+								background-image: url(../../public/images/bgr-work-pls-pls-me-layer-one.png); 
 								-webkit-transform-origin: left center; transform-origin: left center;
 								}
 							.work-grid .pls-pls-me .layer-two i {
-								background-image: url(../img/bgr-work-pls-pls-me-layer-two.png);
+								background-image: url(../../public/images/bgr-work-pls-pls-me-layer-two.png);
 								-webkit-transform-origin: center top; transform-origin: center top;
 								}
 							.work-grid .pls-pls-me .layer-three i {
-								background-image: url(../img/bgr-work-pls-pls-me-layer-three.png);
+								background-image: url(../../public/images/bgr-work-pls-pls-me-layer-three.png);
 								-webkit-transform-origin: left bottom; transform-origin: left bottom;
 								}
-							.work-grid .longo-park .bgr-holder i {background-image: url(../img/bgr-work-longo-park.jpg);}
+							.work-grid .longo-park .bgr-holder i {background-image: url(../../public/images/bgr-work-longo-park.jpg);}
 							.work-grid .longo-park .layer-one i {
-								background-image: url(../img/bgr-work-longo-park-layer-one.png);  background-position: left center;
+								background-image: url(../../public/images/bgr-work-longo-park-layer-one.png);  background-position: left center;
 								-webkit-transform-origin: left bottom; transform-origin: left bottom;
 								}
 							.work-grid .longo-park .layer-two i {
-								background-image: url(../img/bgr-work-longo-park-layer-two.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-longo-park-layer-two.png); background-position: right bottom;
 								-webkit-transform-origin: right bottom; transform-origin: right bottom;
 								}
 							.work-grid .longo-park .layer-three i {
-								background-image: url(../img/bgr-work-longo-park-layer-three.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-longo-park-layer-three.png); background-position: right bottom;
 								-webkit-transform-origin: right bottom; transform-origin: right bottom;
 								}
-							.work-grid .discover-your-city .bgr-holder i {background-image: url(../img/bgr-work-renaissance.jpg);}
+							.work-grid .discover-your-city .bgr-holder i {background-image: url(../../public/images/bgr-work-renaissance.jpg);}
 							.work-grid .discover-your-city .layer-one i {
-								background-image: url(../img/bgr-work-renaissance-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-renaissance-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: center bottom; transform-origin: center bottom; 
 								}
 							.work-grid .discover-your-city .layer-two i {
-								background-image: url(../img/bgr-work-renaissance-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-renaissance-layer-two.png); background-position: left top;
 								-webkit-transform-origin: right top; transform-origin: right top; 
 								}
 							.work-grid .discover-your-city .layer-three i {
-								background-image: url(../img/bgr-work-renaissance-layer-three.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-renaissance-layer-three.png); background-position: left top;
 								-webkit-transform-origin: left bottom; transform-origin: left bottom; 
 								}
-							.work-grid .centaur-properties .bgr-holder i {background-image: url(../img/bgr-work-centaur-properties.jpg);}
+							.work-grid .centaur-properties .bgr-holder i {background-image: url(../../public/images/bgr-work-centaur-properties.jpg);}
 							.work-grid .centaur-properties .layer-one i {
-								background-image: url(../img/bgr-work-centaur-properties-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-centaur-properties-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: right bottom; transform-origin: right bottom; 
 								}
 							.work-grid .centaur-properties .layer-two i {
-								background-image: url(../img/bgr-work-centaur-properties-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-centaur-properties-layer-two.png); background-position: left top;
 								-webkit-transform-origin: center top; transform-origin: center top; 
 								}
 							.work-grid .centaur-properties .layer-three i {
-								background-image: url(../img/bgr-work-centaur-properties-layer-three.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-centaur-properties-layer-three.png); background-position: left top;
 								-webkit-transform-origin: center top; transform-origin: center top; 
 								}
-							.work-grid .the-yoga-school .bgr-holder i {background-image: url(../img/bgr-work-yoga.jpg);}
+							.work-grid .the-yoga-school .bgr-holder i {background-image: url(../../public/images/bgr-work-yoga.jpg);}
 							.work-grid .the-yoga-school .layer-one i {
-								background-image: url(../img/bgr-work-yoga-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-yoga-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: right bottom; transform-origin: right bottom; 
 								}
 							.work-grid .the-yoga-school .layer-two i {
-								background-image: url(../img/bgr-work-yoga-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-yoga-layer-two.png); background-position: left top;
 								-webkit-transform-origin: left bottom; transform-origin: left bottom; 
 								}
 							.work-grid .the-yoga-school .layer-three i {
-								background-image: url(../img/bgr-work-yoga-layer-three.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-yoga-layer-three.png); background-position: left top;
 								-webkit-transform-origin: left bottom; transform-origin: left bottom; 
 								}
-							.work-grid .the-assemblage .bgr-holder i {background-image: url(../img/bgr-assemblage-thumbnail.jpg);}
+							.work-grid .the-assemblage .bgr-holder i {background-image: url(../../public/images/bgr-assemblage-thumbnail.jpg);}
 							.work-grid .the-assemblage .layer-one i {
-								background-image: url(../img/bgr-work-assemblage-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-assemblage-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: right bottom; transform-origin: center top; 
 								}
 							.work-grid .the-assemblage .layer-two i {
-								background-image: url(../img/bgr-work-assemblage-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-assemblage-layer-two.png); background-position: left top;
 								-webkit-transform-origin: left bottom; transform-origin: right bottom; 
 								}
 
-							.work-grid .think-global-school .bgr-holder i {background-image: url(../img/bgr-work-tgs.jpg);}
+							.work-grid .think-global-school .bgr-holder i {background-image: url(../../public/images/bgr-work-tgs.jpg);}
 							.work-grid .think-global-school .layer-one i {
-								background-image: url(../img/bgr-work-tgs-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-tgs-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: right bottom; transform-origin: center top; 
 								}
 							.work-grid .think-global-school .layer-two i {
-								background-image: url(../img/bgr-work-tgs-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-tgs-layer-two.png); background-position: left top;
 								-webkit-transform-origin: left bottom; transform-origin: right bottom; 
 								}
 							
 							.work-grid .item.heineken h3 {z-index: 2}
-							.work-grid .heineken .bgr-holder i {background-image: url(../img/bgr-work-heineken.jpg);}
+							.work-grid .heineken .bgr-holder i {background-image: url(../../public/images/bgr-work-heineken.jpg);}
 							.work-grid .heineken .layer-one i {
-								background-image: url(../img/bgr-work-heineken-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-heineken-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: right center; transform-origin: right center; 
 								}
 							.work-grid .heineken .layer-two i {
-								background-image: url(../img/bgr-work-heineken-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-heineken-layer-two.png); background-position: left top;
 								-webkit-transform-origin: left bottom; transform-origin: left bottom; 
 								}
 
-							.work-grid .grand-marnier .bgr-holder i {background-image: url(../img/bgr-work-gm.jpg);}
+							.work-grid .grand-marnier .bgr-holder i {background-image: url(../../public/images/bgr-work-gm.jpg);}
 							.work-grid .grand-marnier .layer-one i {
-								background-image: url(../img/bgr-work-gm-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-gm-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: center center; transform-origin:center center; 
 								}
 							.work-grid .grand-marnier .layer-two i {
-								background-image: url(../img/bgr-work-gm-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-gm-layer-two.png); background-position: left top;
 								-webkit-transform-origin: left bottom; transform-origin: right bottom; 
 								}
 							.work-grid .grand-marnier .layer-three i {
-								background-image: url(../img/bgr-work-gm-layer-three.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-gm-layer-three.png); background-position: left top;
 								-webkit-transform-origin: center center; transform-origin: center center; 
 								}
 							.work-grid .capitalonespark .bgr-holder i {
-								background-image: url(../img/bgr-work-spark.jpg);
+								background-image: url(../../public/images/bgr-work-spark.jpg);
 								-webkit-transform-origin: left top; transform-origin: left top; 
 								}
 							.work-grid .capitalonespark .layer-one i {
-								background-image: url(../img/bgr-work-spark-layer-one.png); background-position: right bottom;
+								background-image: url(../../public/images/bgr-work-spark-layer-one.png); background-position: right bottom;
 								-webkit-transform-origin: right top; transform-origin: center bottom; 
 								}
 							.work-grid .capitalonespark .layer-two i {
-								background-image: url(../img/bgr-work-spark-layer-two.png); background-position: left top;
+								background-image: url(../../public/images/bgr-work-spark-layer-two.png); background-position: left top;
 								-webkit-transform-origin: center top; transform-origin: center top; 
 								}
                             .work-grid .capitalonespark .layer-two i {
-                                    background-image: url(../img/bgr-work-spark-layer-two.png); background-position: left top;
+                                    background-image: url(../../public/images/bgr-work-spark-layer-two.png); background-position: left top;
                                     -webkit-transform-origin: center top; transform-origin: center top; 
                                 }
                             .work-grid .bergos .layer-one i {

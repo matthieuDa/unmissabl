@@ -5,104 +5,121 @@ Noformat est un site web portfolio/agence de design stratégique avec un systèm
 
 ---
 
-## Structure Actuelle des Fichiers
+## Structure Réorganisée des Fichiers (Nouvelle Architecture)
 
 ```
-noformat/
+unmissabl/
+├── .gitignore                         # Fichiers à ignorer par Git
 ├── ARCHITECTURE.md                    # Ce fichier - Documentation de l'architecture
-├── noformat.html                      # Page principale (HTML5)
 │
-├── Assets Visuels/
-│   ├── Images de l'œil 3D:
+├── public/                            # Ressources publiques statiques
+│   ├── index.html                     # Page principale (anciennement noformat.html)
+│   │
+│   ├── images/                        # Assets visuels
 │   │   ├── eye-normals1.png          # Texture des normales de l'œil
 │   │   ├── eye-pattern.jpg           # Pattern de l'iris
 │   │   ├── eye-pattern1.jpg          # Pattern alternatif
 │   │   ├── refract.png               # Texture de réfraction (cornée)
 │   │   ├── noise.png                 # Texture de bruit
+│   │   │
+│   │   └── Images de fond (parallax):
+│   │       ├── bgr-happy-moves-layer-one.png
+│   │       ├── bgr-pls-pls-me-layer-one.png
+│   │       ├── bgr-pls-pls-me-layer-four.png
+│   │       └── bgr-pls-pls-me-layer-five.png
 │   │
-│   └── Images de fond (parallax):
-│       ├── bgr-happy-moves-layer-one.png
-│       ├── bgr-happy-moves-layer-one.png
-│       ├── bgr-pls-pls-me-layer-one.png
-│       ├── bgr-pls-pls-me-layer-four.png
-│       └── bgr-pls-pls-me-layer-five.png
+│   └── libs/                          # Bibliothèques externes
+│       ├── jquery.min.js              # jQuery 1.11.0
+│       ├── three.js                   # Three.js (WebGL library)
+│       ├── slick.min.js               # Slider/Carousel Slick
+│       ├── slick.css                  # CSS du carousel Slick
+│       ├── modernizr.js               # Feature detection
+│       ├── particles.js               # Animation de particules
+│       ├── recorder.js                # Enregistrement audio/vidéo
+│       ├── gtm.js                     # Google Tag Manager
+│       ├── insight.min.js             # Analytics (Smartlook)
+│       │
+│       └── Plugins jQuery:
+│           ├── jquery.device.js       # Détection du device
+│           ├── jquery.easing.min.js   # Easing animations
+│           ├── jquery.fullpage.js     # Fullpage scrolling
+│           ├── jquery.history.js      # Gestion historique
+│           ├── jquery.isotope.min.js  # Layout grid/isotope
+│           ├── jquery.parallax.js     # Effet parallax
+│           ├── jquery.preloading.js   # Système de preloading
+│           ├── jquery.scrolling.js    # Contrôle du scroll
+│           ├── jquery.video.js        # Gestion des vidéos
+│           └── jquery.vs.js           # Utilitaire custom
 │
-├── Styles CSS/
-│   ├── reset.css                      # Reset/normalisation CSS
-│   ├── blog.css                       # Styles des articles de blog
-│   ├── main.css                       # Styles principaux
-│   ├── updates.css                    # Styles des mises à jour
-│   ├── slick.css                      # CSS du carousel Slick
-│   └── style.min.css                  # Styles minifiés
-│
-├── Bibliothèques Externes (Minifiées)/
-│   ├── jquery.min.js                  # jQuery 1.11.0
-│   ├── three.js                       # Three.js (WebGL library)
-│   ├── slick.min.js                   # Slider/Carousel Slick
-│   ├── modernizr.js                   # Feature detection
-│   ├── particles.js                   # Animation de particules
-│   ├── recorder.js                    # Enregistrement audio/vidéo (?)
+├── src/                               # Code source
+│   ├── core/                          # Scripts principaux et loaders
+│   │   ├── init.js                    # Script d'initialisation principal (2720 lignes)
+│   │   ├── main.js                    # Code obfusqué
+│   │   ├── objloader.js               # Chargeur de fichiers .OBJ (3D models)
+│   │   └── gtm-obfuscated.js          # Code GTM obfusqué
 │   │
-│   └── Plugins jQuery:
-│       ├── jquery.device.js           # Détection du device
-│       ├── jquery.easing.min.js       # Easing animations
-│       ├── jquery.fullpage.js         # Fullpage scrolling
-│       ├── jquery.history.js          # Gestion historique
-│       ├── jquery.isotope.min.js      # Layout grid/isotope
-│       ├── jquery.parallax.js         # Effet parallax
-│       ├── jquery.preloading.js       # Système de preloading
-│       ├── jquery.scrolling.js        # Contrôle du scroll
-│       ├── jquery.video.js            # Gestion des vidéos
-│       └── jquery.vs.js               # Utilitaire custom
-│
-├── Shaders WebGL (Three.js)/
-│   ├── RenderPass.js                  # Post-processing render pass
-│   ├── ShaderPass.js                  # Post-processing shader pass
-│   ├── EffectComposer.js              # Composition des effets
-│   ├── CopyShader.js                  # Shader de copie
+│   ├── effects/                       # Shaders WebGL post-processing
+│   │   ├── EffectComposer.js          # Composition des effets
+│   │   ├── RenderPass.js              # Post-processing render pass
+│   │   ├── ShaderPass.js              # Post-processing shader pass
+│   │   ├── CopyShader.js              # Shader de copie
+│   │   ├── BloomPass.js               # Effet Bloom (luminosité)
+│   │   ├── HorizontalBlurShader.js    # Flou horizontal
+│   │   ├── VerticalBlurShader.js      # Flou vertical
+│   │   └── LuminosityHighPassShader.js # High-pass pour bloom
 │   │
-│   ├── BloomPass.js                   # Effet Bloom (luminosité)
-│   ├── BloomPass.js                   # Effet Bloom
+│   ├── eye/                           # Logique de l'œil 3D
+│   │   ├── eye.js                     # Script de rendu 3D de l'œil
+│   │   └── main.js                    # Code additionnel
 │   │
-│   └── Blur Shaders:
-│       ├── HorizontalBlurShader.js    # Flou horizontal
-│       ├── VerticalBlurShader.js      # Flou vertical
-│       └── LuminosityHighPassShader.js # High-pass pour bloom
-│
-├── Loaders 3D/
-│   └── objloader.js                   # Chargeur de fichiers .OBJ (3D models)
-│
-├── Scripts Principaux/
-│   ├── init.js                        # Script d'initialisation principal (2720 lignes)
-│   ├── main.js                        # Code Cloudflare obfusqué (PROBLÉMATIQUE)
+│   ├── styles/                        # Feuilles de style
+│   │   ├── index.css                  # Point d'entrée CSS (imports)
+│   │   ├── base/
+│   │   │   └── reset.css              # Reset/normalisation CSS
+│   │   ├── main.css                   # Styles principaux
+│   │   ├── updates.css                # Styles des mises à jour
+│   │   └── blog.css                   # Styles des articles de blog
 │   │
-│   └── Extra Scripts/
-│       ├── eye.js                     # Script de rendu 3D de l'œil (NOUVEAU - à optimiser)
-│       └── main.js                    # Code Cloudflare obfusqué (doublé - PROBLÉMATIQUE)
+│   └── ui/                            # Scripts UI (vide pour l'instant)
 │
-├── Analytics & Services/
-│   ├── gtm.js                         # Google Tag Manager
-│   ├── insight.min.js                 # Analytics (Smartlook?)
-│   └── Voir aussi noformat.html pour:
-│       ├── Crazy Egg (heatmap)
-│       ├── Smartlook (session recording)
-│
-├── Bundles Webpack (Minifiés)/
-│   ├── bundle.3a0787f5092e11e9af33.js
-│   ├── init.b73d31584012c4e7cab8.js
-│   └── polyfills.94f10da5f29adce71910.js
-│
-└── Autres/
-    ├── js                             # Fichier (contenu inconnu)
-    └── .qodo/                         # Dossier Qodo (documentation IA ?)
+└── dist/                              # Bundles générés (ignorés par Git)
+    ├── bundle.3a0787f5092e11e9af33.js
+    ├── init.b73d31584012c4e7cab8.js
+    ├── polyfills.94f10da5f29adce71910.js
+    └── style.min.css
 
 ```
 
 ---
 
+## Changements de Chemins
+
+### Ressources Images
+- Ancien: `eye-pattern.jpg` (racine)
+- Nouveau: `public/images/eye-pattern.jpg`
+
+### Bibliothèques
+- Ancien: `jquery.min.js` (racine)
+- Nouveau: `public/libs/jquery.min.js`
+
+### Scripts Core
+- Ancien: `init.js` (racine)
+- Nouveau: `src/core/init.js`
+
+### Shaders/Effects
+- Ancien: `EffectComposer.js` (racine)
+- Nouveau: `src/effects/EffectComposer.js`
+
+### Styles
+- Ancien: `main.css` (racine)
+- Nouveau: `src/styles/main.css`
+- Point d'entrée: `src/styles/index.css`
+
+---
+
 ## Analyse Détaillée des Composants
 
-### 1. **Page HTML Principale** (`noformat.html`)
+### 1. **Page HTML Principale** (`public/index.html`)
 - **Type:** HTML5
 - **Contenu:** 
   - Header avec navigation
